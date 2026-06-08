@@ -54,6 +54,20 @@ from ultralytics import YOLO
 
 from .dataset import BDD100K_CLASSES, CLASS_TO_ID
 
+# COCO → BDD100K class name mapping for zero-shot transfer evaluation.
+# COCO-trained models output COCO labels; this maps them to BDD100K equivalents.
+COCO_TO_BDD100K = {
+    "person": "pedestrian",
+    "car": "car",
+    "truck": "truck",
+    "bus": "bus",
+    "train": "train",
+    "motorcycle": "motorcycle",
+    "bicycle": "bicycle",
+    "traffic light": "traffic light",
+    "stop sign": "traffic sign",  # COCO has only "stop sign"; BDD100K uses generic "traffic sign"
+}
+
 
 class BDD100KDetector:
     """yolo11-based object detector for BDD100K dataset.
@@ -161,7 +175,11 @@ class BDD100KDetector:
         return all_results
 
     def _parse_results(self, result) -> Dict:
-        """Parse yolo11 result object into a structured dictionary.
+        """Parse YOLO11 result object into a structured dictionary.
+
+        Applies COCO→BDD100K class name mapping so that COCO-pretrained
+        models produce BDD100K-compatible labels. Detections whose COCO
+        class has no BDD100K equivalent are dropped.
 
         Args:
             result: Ultralytics Results object.
@@ -180,12 +198,17 @@ class BDD100KDetector:
                 cls_id = int(box.cls[0].cpu().numpy())
                 cls_name = result.names.get(cls_id, f"class_{cls_id}")
 
+                # Map COCO class name to BDD100K equivalent; skip unmapped classes
+                mapped_name = COCO_TO_BDD100K.get(cls_name)
+                if mapped_name is None:
+                    continue
+
                 detections.append(
                     {
                         "bbox": [float(x1), float(y1), float(x2), float(y2)],
                         "confidence": conf,
                         "class_id": cls_id,
-                        "class_name": cls_name,
+                        "class_name": mapped_name,
                     }
                 )
 
