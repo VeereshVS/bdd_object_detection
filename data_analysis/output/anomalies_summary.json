@@ -1,0 +1,18 @@
+{
+  "train": {
+    "total_images": 69863,
+    "high_density_count": 683,
+    "tiny_boxes_count": 33517,
+    "huge_boxes_count": 80,
+    "invalid_boxes_count": 0,
+    "extreme_ar_count": 418
+  },
+  "val": {
+    "total_images": 10000,
+    "high_density_count": 99,
+    "tiny_boxes_count": 4836,
+    "huge_boxes_count": 9,
+    "invalid_boxes_count": 0,
+    "extreme_ar_count": 52
+  }
+}

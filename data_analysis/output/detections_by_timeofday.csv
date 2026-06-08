@@ -1,0 +1,5 @@
+,pedestrian,rider,car,truck,bus,train,motorcycle,bicycle,traffic light,traffic sign
+daytime,66058,3331,401271,22325,8410,97,0,0,88866,132955
+dawn/dusk,6321,316,55985,2292,1014,9,0,0,12937,17251
+night,18898,868,255152,5323,2227,30,0,0,84260,89366
+undefined,72,2,803,31,21,0,0,0,54,114

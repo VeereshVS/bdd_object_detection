@@ -1,0 +1,8 @@
+,pedestrian,rider,car,truck,bus,train,motorcycle,bicycle,traffic light,traffic sign
+city street,83817,3809,448493,20045,8729,82,0,0,156911,159035
+highway,3290,375,158695,7588,2237,48,0,0,18912,62023
+residential,3947,322,98101,2125,622,6,0,0,9725,17490
+parking lot,172,4,4592,109,36,0,0,0,185,542
+undefined,85,4,2457,62,33,0,0,0,320,471
+tunnel,14,3,684,35,15,0,0,0,39,87
+gas stations,24,0,189,7,0,0,0,0,25,38

@@ -1,0 +1,561 @@
+{
+  "most_crowded": [
+    {
+      "image": "5488ff78-d6d75d2c.jpg",
+      "num_objects": 88,
+      "classes": {
+        "pedestrian": 49,
+        "traffic light": 8,
+        "traffic sign": 15,
+        "car": 13,
+        "truck": 3
+      }
+    },
+    {
+      "image": "7a9d6ddb-f6db12be.jpg",
+      "num_objects": 88,
+      "classes": {
+        "traffic light": 18,
+        "traffic sign": 10,
+        "car": 17,
+        "bus": 1,
+        "pedestrian": 40,
+        "rider": 2
+      }
+    },
+    {
+      "image": "9f813b6a-18e666e2.jpg",
+      "num_objects": 85,
+      "classes": {
+        "pedestrian": 34,
+        "car": 24,
+        "traffic light": 14,
+        "traffic sign": 12,
+        "truck": 1
+      }
+    },
+    {
+      "image": "a3d81283-5b9afb34.jpg",
+      "num_objects": 84,
+      "classes": {
+        "traffic sign": 23,
+        "car": 61
+      }
+    },
+    {
+      "image": "12775cd3-5f803a45.jpg",
+      "num_objects": 80,
+      "classes": {
+        "pedestrian": 45,
+        "car": 14,
+        "truck": 1,
+        "traffic light": 11,
+        "traffic sign": 9
+      }
+    },
+    {
+      "image": "215877fc-28789a4c.jpg",
+      "num_objects": 79,
+      "classes": {
+        "pedestrian": 43,
+        "traffic light": 6,
+        "traffic sign": 14,
+        "car": 16
+      }
+    },
+    {
+      "image": "1cd6b4e9-15d5d536.jpg",
+      "num_objects": 78,
+      "classes": {
+        "car": 65,
+        "truck": 1,
+        "traffic light": 8,
+        "traffic sign": 4
+      }
+    },
+    {
+      "image": "afeb6289-553821ec.jpg",
+      "num_objects": 78,
+      "classes": {
+        "pedestrian": 35,
+        "car": 21,
+        "truck": 2,
+        "traffic sign": 11,
+        "traffic light": 9
+      }
+    },
+    {
+      "image": "9779925a-23babf38.jpg",
+      "num_objects": 77,
+      "classes": {
+        "traffic light": 14,
+        "traffic sign": 15,
+        "pedestrian": 4,
+        "car": 44
+      }
+    },
+    {
+      "image": "1c752ea4-99dfacb8.jpg",
+      "num_objects": 76,
+      "classes": {
+        "pedestrian": 22,
+        "car": 27,
+        "rider": 1,
+        "truck": 1,
+        "bus": 1,
+        "traffic sign": 12,
+        "traffic light": 12
+      }
+    }
+  ],
+  "most_diverse": [
+    {
+      "image": "001bad4e-2fa8f3b6.jpg",
+      "num_classes": 7,
+      "classes": [
+        "traffic sign",
+        "car",
+        "pedestrian",
+        "truck",
+        "rider",
+        "traffic light",
+        "bus"
+      ]
+    },
+    {
+      "image": "014b8fc3-532a0660.jpg",
+      "num_classes": 7,
+      "classes": [
+        "traffic sign",
+        "pedestrian",
+        "car",
+        "truck",
+        "rider",
+        "traffic light",
+        "bus"
+      ]
+    },
+    {
+      "image": "017bec14-8512b7fd.jpg",
+      "num_classes": 7,
+      "classes": [
+        "traffic sign",
+        "car",
+        "pedestrian",
+        "truck",
+        "rider",
+        "traffic light",
+        "bus"
+      ]
+    },
+    {
+      "image": "02f95a54-6494531c.jpg",
+      "num_classes": 7,
+      "classes": [
+        "traffic sign",
+        "pedestrian",
+        "car",
+        "train",
+        "truck",
+        "rider",
+        "traffic light"
+      ]
+    },
+    {
+      "image": "0309d11c-4f7cba1a.jpg",
+      "num_classes": 7,
+      "classes": [
+        "traffic sign",
+        "car",
+        "pedestrian",
+        "truck",
+        "rider",
+        "traffic light",
+        "bus"
+      ]
+    },
+    {
+      "image": "0521fd41-c08687cf.jpg",
+      "num_classes": 7,
+      "classes": [
+        "traffic sign",
+        "pedestrian",
+        "car",
+        "truck",
+        "rider",
+        "traffic light",
+        "bus"
+      ]
+    },
+    {
+      "image": "05c1c47a-cb817b64.jpg",
+      "num_classes": 7,
+      "classes": [
+        "traffic sign",
+        "car",
+        "pedestrian",
+        "truck",
+        "rider",
+        "traffic light",
+        "bus"
+      ]
+    },
+    {
+      "image": "067cecc1-d40ce82c.jpg",
+      "num_classes": 7,
+      "classes": [
+        "traffic sign",
+        "car",
+        "pedestrian",
+        "truck",
+        "rider",
+        "traffic light",
+        "bus"
+      ]
+    },
+    {
+      "image": "06b4defc-e86850c5.jpg",
+      "num_classes": 7,
+      "classes": [
+        "traffic sign",
+        "pedestrian",
+        "car",
+        "truck",
+        "rider",
+        "traffic light",
+        "bus"
+      ]
+    },
+    {
+      "image": "06d54ae6-bf7ed032.jpg",
+      "num_classes": 7,
+      "classes": [
+        "traffic sign",
+        "car",
+        "pedestrian",
+        "truck",
+        "rider",
+        "traffic light",
+        "bus"
+      ]
+    }
+  ],
+  "single_class_dominant": [
+    {
+      "image": "0000f77c-cb820c98.jpg",
+      "dominant_class": "car",
+      "dominance_ratio": 1.0,
+      "total_objects": 7
+    },
+    {
+      "image": "0004974f-05e1c285.jpg",
+      "dominant_class": "car",
+      "dominance_ratio": 1.0,
+      "total_objects": 6
+    },
+    {
+      "image": "00054602-3bf57337.jpg",
+      "dominant_class": "car",
+      "dominance_ratio": 1.0,
+      "total_objects": 5
+    },
+    {
+      "image": "000d4f89-3bcbe37a.jpg",
+      "dominant_class": "car",
+      "dominance_ratio": 1.0,
+      "total_objects": 7
+    },
+    {
+      "image": "002e6895-442e6bc1.jpg",
+      "dominant_class": "car",
+      "dominance_ratio": 1.0,
+      "total_objects": 6
+    },
+    {
+      "image": "00390995-49d9a01e.jpg",
+      "dominant_class": "car",
+      "dominance_ratio": 1.0,
+      "total_objects": 14
+    },
+    {
+      "image": "003baca5-70c87fc6.jpg",
+      "dominant_class": "car",
+      "dominance_ratio": 1.0,
+      "total_objects": 8
+    },
+    {
+      "image": "003baca5-d6cd84e5.jpg",
+      "dominant_class": "car",
+      "dominance_ratio": 1.0,
+      "total_objects": 5
+    },
+    {
+      "image": "0049e5b8-725e21a0.jpg",
+      "dominant_class": "car",
+      "dominance_ratio": 1.0,
+      "total_objects": 10
+    },
+    {
+      "image": "0062ab5a-54bb129b.jpg",
+      "dominant_class": "car",
+      "dominance_ratio": 1.0,
+      "total_objects": 13
+    }
+  ],
+  "rare_classes": [
+    {
+      "image": "002d290d-89f4e5c0.jpg",
+      "rare_class": "train (total instances: 136)",
+      "category": "train",
+      "all_classes": {
+        "car": 6,
+        "traffic sign": 4,
+        "train": 1
+      }
+    },
+    {
+      "image": "02f95a54-6494531c.jpg",
+      "rare_class": "train (total instances: 136)",
+      "category": "train",
+      "all_classes": {
+        "traffic sign": 6,
+        "traffic light": 5,
+        "pedestrian": 3,
+        "rider": 1,
+        "car": 18,
+        "truck": 1,
+        "train": 1
+      }
+    },
+    {
+      "image": "0406b065-a759da9c.jpg",
+      "rare_class": "train (total instances: 136)",
+      "category": "train",
+      "all_classes": {
+        "traffic light": 12,
+        "traffic sign": 8,
+        "pedestrian": 8,
+        "car": 7,
+        "truck": 1,
+        "train": 1
+      }
+    },
+    {
+      "image": "04488248-af1d57c1.jpg",
+      "rare_class": "train (total instances: 136)",
+      "category": "train",
+      "all_classes": {
+        "car": 4,
+        "traffic sign": 8,
+        "train": 1
+      }
+    },
+    {
+      "image": "06cdf0b1-6fec3924.jpg",
+      "rare_class": "train (total instances: 136)",
+      "category": "train",
+      "all_classes": {
+        "car": 6,
+        "train": 1
+      }
+    },
+    {
+      "image": "0710389f-038050ae.jpg",
+      "rare_class": "train (total instances: 136)",
+      "category": "train",
+      "all_classes": {
+        "pedestrian": 6,
+        "train": 4,
+        "bus": 1,
+        "car": 5
+      }
+    },
+    {
+      "image": "0808d5ec-5aa2de14.jpg",
+      "rare_class": "train (total instances: 136)",
+      "category": "train",
+      "all_classes": {
+        "traffic sign": 1,
+        "train": 1,
+        "car": 6
+      }
+    },
+    {
+      "image": "0c1d07e3-8cb61d13.jpg",
+      "rare_class": "train (total instances: 136)",
+      "category": "train",
+      "all_classes": {
+        "car": 14,
+        "pedestrian": 3,
+        "train": 2
+      }
+    },
+    {
+      "image": "0ed0d326-5ec5573f.jpg",
+      "rare_class": "train (total instances: 136)",
+      "category": "train",
+      "all_classes": {
+        "car": 10,
+        "truck": 2,
+        "train": 1,
+        "traffic light": 7,
+        "traffic sign": 3,
+        "pedestrian": 1
+      }
+    },
+    {
+      "image": "1125356f-edb7f7c8.jpg",
+      "rare_class": "train (total instances: 136)",
+      "category": "train",
+      "all_classes": {
+        "traffic sign": 6,
+        "train": 1,
+        "car": 2
+      }
+    }
+  ],
+  "tiny_objects": [
+    {
+      "image": "20a773e1-a9268e6b.jpg",
+      "category": "car",
+      "area": 0.8714116864181584,
+      "width": 3.49281400000001,
+      "height": 0.24948700000004465
+    },
+    {
+      "image": "7bc6abdd-6a5c7b75.jpg",
+      "category": "traffic light",
+      "area": 0.9366393988381135,
+      "width": 0.30604600000003757,
+      "height": 3.0604529999999954
+    },
+    {
+      "image": "3bb2f5c2-1463d3a1.jpg",
+      "category": "traffic light",
+      "area": 1.3636774520001036,
+      "width": 0.10662500000000819,
+      "height": 12.78947199999999
+    },
+    {
+      "image": "a34c36f3-22c7e2c3.jpg",
+      "category": "traffic light",
+      "area": 1.4986148361290492,
+      "width": 2.448360999999977,
+      "height": 0.6120890000000259
+    },
+    {
+      "image": "84643961-e2e4a747.jpg",
+      "category": "car",
+      "area": 1.9917934357781064,
+      "width": 3.9917859999999337,
+      "height": 0.49897300000003497
+    },
+    {
+      "image": "038c1daf-f6f507ff.jpg",
+      "category": "traffic light",
+      "area": 1.991796429618014,
+      "width": 0.9979470000000106,
+      "height": 1.9958939999999927
+    },
+    {
+      "image": "15ae7b39-b1b74a10.jpg",
+      "category": "car",
+      "area": 1.9917979265378967,
+      "width": 3.991786999999988,
+      "height": 0.4989739999999756
+    },
+    {
+      "image": "6025fdd3-a1a383e6.jpg",
+      "category": "car",
+      "area": 1.991798425512094,
+      "width": 3.9917879999999286,
+      "height": 0.49897400000003245
+    },
+    {
+      "image": "334486e2-323efc59.jpg",
+      "category": "traffic light",
+      "area": 2.2407729792140283,
+      "width": 4.49076100000002,
+      "height": 0.498974000000004
+    },
+    {
+      "image": "14020ffa-5b61de09.jpg",
+      "category": "pedestrian",
+      "area": 2.3953824995928525,
+      "width": 4.89425899999992,
+      "height": 0.48942699999997785
+    }
+  ],
+  "large_objects": [
+    {
+      "image": "1d33c83b-71e1ea1c.jpg",
+      "category": "traffic sign",
+      "area": 917709.770977253,
+      "width": 1279.269409,
+      "height": 717.370215
+    },
+    {
+      "image": "2e5a3ced-c7603d0d.jpg",
+      "category": "traffic sign",
+      "area": 906063.3648974826,
+      "width": 1273.956878,
+      "height": 711.2198070000001
+    },
+    {
+      "image": "4efe84c6-93313761.jpg",
+      "category": "truck",
+      "area": 828772.1822174517,
+      "width": 1192.049582,
+      "height": 695.249757
+    },
+    {
+      "image": "70cc96e1-aa1781b5.jpg",
+      "category": "truck",
+      "area": 778199.5331588684,
+      "width": 1138.777474,
+      "height": 683.364003
+    },
+    {
+      "image": "414fe350-4f0f6e64.jpg",
+      "category": "bus",
+      "area": 775744.2348936556,
+      "width": 1079.8343570000002,
+      "height": 718.391881
+    },
+    {
+      "image": "9fbdb044-02a08068.jpg",
+      "category": "truck",
+      "area": 730169.0264563892,
+      "width": 1277.70014,
+      "height": 571.471352
+    },
+    {
+      "image": "70cc96e1-ca70dad2.jpg",
+      "category": "truck",
+      "area": 724239.7819741622,
+      "width": 1135.5746760000002,
+      "height": 637.7738049999999
+    },
+    {
+      "image": "1f30768a-c707eb93.jpg",
+      "category": "bus",
+      "area": 691421.131270193,
+      "width": 1196.6448110000001,
+      "height": 577.799799
+    },
+    {
+      "image": "1812c350-dd4d17ca.jpg",
+      "category": "bus",
+      "area": 675146.3456769249,
+      "width": 942.2120790000001,
+      "height": 716.554543
+    },
+    {
+      "image": "99cd6536-c341231f.jpg",
+      "category": "truck",
+      "area": 645974.8368120104,
+      "width": 899.999888,
+      "height": 717.749908
+    }
+  ]
+}
