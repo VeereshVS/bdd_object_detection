@@ -1,0 +1,135 @@
+{
+  "eval_results": {
+    "mAP": 0.2283985179242808,
+    "per_class": {
+      "pedestrian": {
+        "ap": 0.4144487155239183,
+        "precision": 0.8097488921713442,
+        "recall": 0.41336148393907407,
+        "num_predictions": 6770,
+        "num_ground_truth": 13262,
+        "tp": 5482,
+        "fp": 1288,
+        "fn": 7780
+      },
+      "rider": {
+        "ap": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "num_predictions": 0,
+        "num_ground_truth": 649,
+        "tp": 0,
+        "fp": 0,
+        "fn": 649
+      },
+      "car": {
+        "ap": 0.4455477278013662,
+        "precision": 0.8777624309392266,
+        "recall": 0.48357169336429084,
+        "num_predictions": 56472,
+        "num_ground_truth": 102506,
+        "tp": 49569,
+        "fp": 6903,
+        "fn": 52937
+      },
+      "truck": {
+        "ap": 0.3316590379134129,
+        "precision": 0.4133647461983294,
+        "recall": 0.4546525323910483,
+        "num_predictions": 4669,
+        "num_ground_truth": 4245,
+        "tp": 1930,
+        "fp": 2739,
+        "fn": 2315
+      },
+      "bus": {
+        "ap": 0.37739128780711667,
+        "precision": 0.5280373831775701,
+        "recall": 0.4245460237946149,
+        "num_predictions": 1284,
+        "num_ground_truth": 1597,
+        "tp": 678,
+        "fp": 606,
+        "fn": 919
+      },
+      "train": {
+        "ap": 0.008559622195985831,
+        "precision": 0.018518518518518517,
+        "recall": 0.13333333333333333,
+        "num_predictions": 108,
+        "num_ground_truth": 15,
+        "tp": 2,
+        "fp": 106,
+        "fn": 13
+      },
+      "motorcycle": {
+        "ap": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "num_predictions": 216,
+        "num_ground_truth": 0,
+        "tp": 0,
+        "fp": 216
+      },
+      "bicycle": {
+        "ap": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "num_predictions": 356,
+        "num_ground_truth": 0,
+        "tp": 0,
+        "fp": 356
+      },
+      "traffic light": {
+        "ap": 0.15867266124335533,
+        "precision": 0.614614191000141,
+        "recall": 0.16206062860331039,
+        "num_predictions": 7089,
+        "num_ground_truth": 26885,
+        "tp": 4357,
+        "fp": 2732,
+        "fn": 22528
+      },
+      "traffic sign": {
+        "ap": 0.09090909090909091,
+        "precision": 0.9508928571428571,
+        "recall": 0.006101753179786868,
+        "num_predictions": 224,
+        "num_ground_truth": 34908,
+        "tp": 213,
+        "fp": 11,
+        "fn": 34695
+      }
+    },
+    "iou_threshold": 0.5,
+    "num_classes": 10
+  },
+  "multi_iou": {
+    "mAP_50": 0.2283985179242808,
+    "mAP_75": 0.17939454759154694,
+    "mAP_50_95": 0.17105447569310114
+  },
+  "error_summary": {
+    "classification_errors": 3243,
+    "localization_errors": 6658,
+    "duplicate_detections": 1836,
+    "background_fps": 3851,
+    "missed_detections": 119224
+  },
+  "size_performance": {
+    "small": 0.07509415293662537,
+    "medium": 0.24348598466803828,
+    "large": 0.38059736509935094
+  },
+  "suggestions": [
+    "CLASS IMBALANCE: 'rider' has low AP (0.000). Consider data augmentation or oversampling for this class.",
+    "CLASS IMBALANCE: 'motorcycle' has low AP (0.000). Consider data augmentation or oversampling for this class.",
+    "CLASS IMBALANCE: 'bicycle' has low AP (0.000). Consider data augmentation or oversampling for this class.",
+    "LOCALIZATION: More localization errors than classification errors. Consider: (1) Training with more IoU thresholds, (2) Using GIoU/DIoU loss, (3) Increasing input resolution.",
+    "HIGH MISS RATE: >30% of ground truth objects are not detected. Consider: (1) Lowering confidence threshold, (2) Using larger model variant, (3) Multi-scale testing.",
+    "SMALL OBJECTS: 'traffic light' detection is weak (AP=0.159). Consider: (1) Higher input resolution (1280px), (2) Adding more P3-level detection layers, (3) Mosaic augmentation.",
+    "SMALL OBJECTS: 'traffic sign' detection is weak (AP=0.091). Consider: (1) Higher input resolution (1280px), (2) Adding more P3-level detection layers, (3) Mosaic augmentation.",
+    "GENERAL: Consider ensemble of multiple model scales (YOLO11s + YOLO11m) for improved accuracy at the cost of inference time.",
+    "TRAINING: Use longer training schedules (100+ epochs) with cosine LR scheduling and multi-scale training for best results."
+  ]
+}

@@ -1,0 +1,43 @@
+======================================================================
+BDD100K OBJECT DETECTION - COMPREHENSIVE EVALUATION REPORT
+======================================================================
+
+## 1. OVERALL METRICS
+   mAP@0.5: 0.2284
+
+## 2. PER-CLASS PERFORMANCE
+   Class                AP         Precision    Recall    
+   ----------------------------------------------------
+   car                  0.4455     0.8778       0.4836    
+   pedestrian           0.4144     0.8097       0.4134    
+   bus                  0.3774     0.5280       0.4245    
+   truck                0.3317     0.4134       0.4547    
+   traffic light        0.1587     0.6146       0.1621    
+   traffic sign         0.0909     0.9509       0.0061    
+   train                0.0086     0.0185       0.1333    
+   rider                0.0000     0.0000       0.0000    
+   motorcycle           0.0000     0.0000       0.0000    
+   bicycle              0.0000     0.0000       0.0000    
+
+## 3. ERROR ANALYSIS
+   classification_errors: 3243
+   localization_errors: 6658
+   duplicate_detections: 1836
+   background_fps: 3851
+   missed_detections: 119224
+
+## 4. PERFORMANCE BY OBJECT SIZE
+   small: mAP=0.0751
+   medium: mAP=0.2435
+   large: mAP=0.3806
+
+## 5. IMPROVEMENT SUGGESTIONS
+   1. CLASS IMBALANCE: 'rider' has low AP (0.000). Consider data augmentation or oversampling for this class.
+   2. CLASS IMBALANCE: 'motorcycle' has low AP (0.000). Consider data augmentation or oversampling for this class.
+   3. CLASS IMBALANCE: 'bicycle' has low AP (0.000). Consider data augmentation or oversampling for this class.
+   4. LOCALIZATION: More localization errors than classification errors. Consider: (1) Training with more IoU thresholds, (2) Using GIoU/DIoU loss, (3) Increasing input resolution.
+   5. HIGH MISS RATE: >30% of ground truth objects are not detected. Consider: (1) Lowering confidence threshold, (2) Using larger model variant, (3) Multi-scale testing.
+   6. SMALL OBJECTS: 'traffic light' detection is weak (AP=0.159). Consider: (1) Higher input resolution (1280px), (2) Adding more P3-level detection layers, (3) Mosaic augmentation.
+   7. SMALL OBJECTS: 'traffic sign' detection is weak (AP=0.091). Consider: (1) Higher input resolution (1280px), (2) Adding more P3-level detection layers, (3) Mosaic augmentation.
+   8. GENERAL: Consider ensemble of multiple model scales (YOLO11s + YOLO11m) for improved accuracy at the cost of inference time.
+   9. TRAINING: Use longer training schedules (100+ epochs) with cosine LR scheduling and multi-scale training for best results.
