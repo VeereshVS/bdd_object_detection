@@ -417,14 +417,12 @@ The model is 99.4% blind to traffic signs. Options ranked by practicality:
 
 ### Priority 5: Handle Rider Class
 
-Options:
 - **Fine-tune on BDD100K** (most practical): Training set has "rider" annotations — the model will learn this combined concept
 - Post-processing heuristic: if "pedestrian" bbox highly overlaps with "motorcycle"/"bicycle" bbox, merge into "rider" box
 - Modify training to add rider-specific augmentation (person + vehicle composite)
 
-### Priority 6: Ensemble & Post-Processing
+### Priority 6: Post-Processing
 
-- **Multi-model ensemble**: YOLO11s (fast) + YOLO11m (balanced) + YOLO11l (small object focus)
 - **Class-specific confidence thresholds**: Lower threshold for rare classes (train, rider) to improve recall
 - **Test-time augmentation**: Multi-scale inference (640 + 1280) + horizontal flip for +2–3% mAP
 - **Ego vehicle suppression**: Post-processing rule to ignore car detections in bottom 15% of frame with >80% overlap to image borders
@@ -483,5 +481,3 @@ The following class name mapping was applied during inference to bridge the COCO
 All other COCO classes (71 remaining out of 80 total) are **dropped** during inference as they have no BDD100K equivalent. This prevents false positives from irrelevant COCO classes (e.g., "couch", "laptop", "pizza") appearing in driving scene evaluation.
 
 ---
-
-*Document based on evaluation results in `evaluation_results_yolo11m_conf0.25/`. All metrics computed on the full BDD100K validation set (10,000 images) using YOLO11m with COCO pretrained weights and COCO→BDD100K class mapping.*
