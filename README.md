@@ -58,6 +58,7 @@ bdd100k_object_detection/
 └── docs/
     ├── data_analysis_report.md
     ├── model_documentation.md
+    ├── EvaluationAnalysis.md
     └── evaluation_report.md
 ```
 
@@ -316,6 +317,8 @@ evaluation_results/
 ├── full_report.txt
 └── results.json
 ```
+
+📊 Detailed evaluation analysis, including per-class performance, error analysis, and metric breakdowns, is documented in [docs/EvaluationAnalysis.md](docs/EvaluationAnalysis.md).
 
 ---
 
