@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  # Data Analysis Service
+  data-analysis:
+    build:
+      context: ./data_analysis
+      dockerfile: Dockerfile
+    volumes:
+      - ${BDD_DATA_PATH:-./data/bdd100k}:/data/bdd100k:ro
+      - ./output/data_analysis:/output
+    environment:
+      - DATA_ROOT=/data/bdd100k
+    command: >
+      python run_analysis.py 
+        --data-root /data/bdd100k 
+        --output /output
+
+  # Data Analysis Dashboard (Interactive)
+  dashboard:
+    build:
+      context: ./data_analysis
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    volumes:
+      - ${BDD_DATA_PATH:-./data/bdd100k}:/data/bdd100k:ro
+    environment:
+      - DATA_ROOT=/data/bdd100k
+    command: >
+      streamlit run dashboard.py 
+        --server.port 8501 
+        --server.address 0.0.0.0
+        -- --data-root /data/bdd100k

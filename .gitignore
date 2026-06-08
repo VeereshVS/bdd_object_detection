@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+venv/
+.env/
+
+# IDE
+.vscode/
+.idea/
+
+# Data files (too large for git)
+data/
+*.zip
+*.tar.gz
+
+# Model weights
+*.pt
+*.onnx
+runs/
+
+# Output files
+# output/
+# evaluation_results/
+# inference_results/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/

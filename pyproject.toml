@@ -1,0 +1,26 @@
+[project]
+name = "bdd100k-object-detection"
+version = "1.0.0"
+description = "End-to-end object detection pipeline on BDD100K dataset using YOLO11"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Developer"}
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py310']
+
+[tool.pylint.messages_control]
+disable = [
+    "C0114",  # missing-module-docstring (we have them, just not everywhere)
+    "R0903",  # too-few-public-methods
+]
+
+[tool.pylint.format]
+max-line-length = 88
+
+[tool.isort]
+profile = "black"
+line_length = 88
