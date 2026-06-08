@@ -300,16 +300,7 @@ evaluation_results_yolo11m_conf0.25/qualitative/sample_0000.jpg through sample_0
 
 The data analysis (documented in `docs/data_analysis_report.md`) revealed patterns that directly explain evaluation results:
 
-### 8.1 Class Imbalance → Model Bias
-
-| Data Analysis Finding | Evaluation Impact |
-|----------------------|-------------------|
-| `car` accounts for ~50% of all annotations | Car has highest AP (0.446) — model is well-calibrated for this dominant class |
-| `traffic sign` is second largest (34,908 in val) | Despite abundance, AP=0.091 because COCO has no generic sign concept |
-| `train` has <0.1% of annotations (15 in val) | AP=0.009 — insufficient data for either COCO or BDD100K |
-| `rider` accounts for ~2% of annotations | AP=0.000 — structural taxonomy gap (no COCO equivalent) |
-
-### 8.2 Object Size Distribution → Scale-Dependent Failure
+### 8.1 Object Size Distribution → Scale-Dependent Failure
 
 | Data Analysis Finding | Evaluation Impact |
 |----------------------|-------------------|
@@ -319,7 +310,7 @@ The data analysis (documented in `docs/data_analysis_report.md`) revealed patter
 | Cars: mean area ~20,000 px² (medium-large) | AP=0.446, recall=0.484 — best balanced performance |
 | Trucks/buses: mean area ~50K–60K px² (large) | AP=0.33–0.38 — large size compensates for less data |
 
-### 8.3 Spatial Distribution → Detection Patterns
+### 8.2 Spatial Distribution → Detection Patterns
 
 | Data Analysis Finding | Evaluation Impact |
 |----------------------|-------------------|
@@ -328,7 +319,7 @@ The data analysis (documented in `docs/data_analysis_report.md`) revealed patter
 | Pedestrians on sides (sidewalks) | Peripheral objects receive less spatial attention |
 | Traffic signs on upper-left/right (poles) | Peripheral + small = compounded difficulty |
 
-### 8.4 Occlusion/Truncation Rates → Error Patterns
+### 8.3 Occlusion/Truncation Rates → Error Patterns
 
 | Data Analysis Finding | Evaluation Impact |
 |----------------------|-------------------|
@@ -336,7 +327,7 @@ The data analysis (documented in `docs/data_analysis_report.md`) revealed patter
 | Cars: moderate occlusion (~15%) | Qualitative analysis confirms model misses heavily occluded cars |
 | Bicycles: high truncation (~25%) at borders | Combined with "rider" taxonomy issue → complete failure |
 
-### 8.5 Scene/Time-of-Day Distribution → Environmental Factors
+### 8.4 Scene/Time-of-Day Distribution → Environmental Factors
 
 | Data Analysis Finding | Evaluation Impact |
 |----------------------|-------------------|
@@ -392,8 +383,6 @@ The data analysis (documented in `docs/data_analysis_report.md`) revealed patter
 
 ### Priority 1: Fine-Tune on BDD100K (Highest Impact)
 
-**Expected Impact**: mAP could reach **0.45–0.55** based on published YOLO11 benchmarks on similar datasets.
-
 Fine-tuning on the BDD100K training set (70K images) for 50–100 epochs would:
 - Teach the model BDD100K-specific classes (traffic sign, rider) — the biggest gap
 - Adapt features to driving scene characteristics (dashcam perspective, road scenarios)
@@ -406,8 +395,6 @@ python -m src.train --model yolo11m --bdd-root ../bdd100k --epochs 50 --batch-si
 ```
 
 ### Priority 2: Increase Input Resolution
-
-**Expected Impact**: Small object mAP could improve 2–3× (from 0.075 to 0.15–0.22).
 
 - Use `--imgsz 1280` to match BDD100K's native resolution
 - Traffic lights (area ~1,500 px²) would double in pixel count → more features for detection
@@ -472,8 +459,7 @@ python evaluation/run_evaluation.py \
     --model yolo11m \
     --data-root ../bdd100k \
     --output evaluation_results_yolo11m_conf0.25 \
-    --conf 0.25 \
-    --num-samples 20
+    --conf 0.25
 ```
 
 ---
