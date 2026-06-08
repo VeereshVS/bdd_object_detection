@@ -1,0 +1,134 @@
+{
+  "eval_results": {
+    "mAP": 0.15205652420786314,
+    "per_class": {
+      "pedestrian": {
+        "ap": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "num_predictions": 0,
+        "num_ground_truth": 13262,
+        "tp": 0,
+        "fp": 0,
+        "fn": 13262
+      },
+      "rider": {
+        "ap": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "num_predictions": 0,
+        "num_ground_truth": 649,
+        "tp": 0,
+        "fp": 0,
+        "fn": 649
+      },
+      "car": {
+        "ap": 0.4400667811171144,
+        "precision": 0.8423107233839782,
+        "recall": 0.44835424267847734,
+        "num_predictions": 54563,
+        "num_ground_truth": 102506,
+        "tp": 45959,
+        "fp": 8604,
+        "fn": 56547
+      },
+      "truck": {
+        "ap": 0.31104401996429476,
+        "precision": 0.40807498197548664,
+        "recall": 0.4,
+        "num_predictions": 4161,
+        "num_ground_truth": 4245,
+        "tp": 1698,
+        "fp": 2463,
+        "fn": 2547
+      },
+      "bus": {
+        "ap": 0.31045432514678695,
+        "precision": 0.51010101010101,
+        "recall": 0.3794614902943018,
+        "num_predictions": 1188,
+        "num_ground_truth": 1597,
+        "tp": 606,
+        "fp": 582,
+        "fn": 991
+      },
+      "train": {
+        "ap": 0.005681818181818182,
+        "precision": 0.009523809523809525,
+        "recall": 0.06666666666666667,
+        "num_predictions": 105,
+        "num_ground_truth": 15,
+        "tp": 1,
+        "fp": 104,
+        "fn": 14
+      },
+      "motorcycle": {
+        "ap": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "num_predictions": 227,
+        "num_ground_truth": 0,
+        "tp": 0,
+        "fp": 227
+      },
+      "bicycle": {
+        "ap": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "num_predictions": 342,
+        "num_ground_truth": 0,
+        "tp": 0,
+        "fp": 342
+      },
+      "traffic light": {
+        "ap": 0.149205249252891,
+        "precision": 0.5221674876847291,
+        "recall": 0.14588060256648688,
+        "num_predictions": 7511,
+        "num_ground_truth": 26885,
+        "tp": 3922,
+        "fp": 3589,
+        "fn": 22963
+      },
+      "traffic sign": {
+        "ap": 0.0,
+        "precision": 0.0,
+        "recall": 0.0,
+        "num_predictions": 0,
+        "num_ground_truth": 34908,
+        "tp": 0,
+        "fp": 0,
+        "fn": 34908
+      }
+    },
+    "iou_threshold": 0.5,
+    "num_classes": 10
+  },
+  "multi_iou": {
+    "mAP_50": 0.15205652420786314,
+    "mAP_75": 0.12446047177578422,
+    "mAP_50_95": 0.11408865191119237
+  },
+  "error_summary": {
+    "classification_errors": 8505,
+    "localization_errors": 8351,
+    "duplicate_detections": 1792,
+    "background_fps": 5399,
+    "missed_detections": 123935
+  },
+  "size_performance": {
+    "small": 0.036834062728636145,
+    "medium": 0.14134652244010956,
+    "large": 0.2843135512382927
+  },
+  "suggestions": [
+    "CLASS IMBALANCE: 'pedestrian' has low AP (0.000). Consider data augmentation or oversampling for this class.",
+    "CLASS IMBALANCE: 'rider' has low AP (0.000). Consider data augmentation or oversampling for this class.",
+    "CLASS IMBALANCE: 'motorcycle' has low AP (0.000). Consider data augmentation or oversampling for this class.",
+    "HIGH MISS RATE: >30% of ground truth objects are not detected. Consider: (1) Lowering confidence threshold, (2) Using larger model variant, (3) Multi-scale testing.",
+    "SMALL OBJECTS: 'traffic light' detection is weak (AP=0.149). Consider: (1) Higher input resolution (1280px), (2) Adding more P3-level detection layers, (3) Mosaic augmentation.",
+    "SMALL OBJECTS: 'traffic sign' detection is weak (AP=0.000). Consider: (1) Higher input resolution (1280px), (2) Adding more P3-level detection layers, (3) Mosaic augmentation.",
+    "GENERAL: Consider ensemble of multiple model scales (YOLO11s + YOLO11m) for improved accuracy at the cost of inference time.",
+    "TRAINING: Use longer training schedules (100+ epochs) with cosine LR scheduling and multi-scale training for best results."
+  ]
+}

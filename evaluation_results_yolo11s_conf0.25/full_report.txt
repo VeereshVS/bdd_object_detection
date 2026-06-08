@@ -1,0 +1,42 @@
+======================================================================
+BDD100K OBJECT DETECTION - COMPREHENSIVE EVALUATION REPORT
+======================================================================
+
+## 1. OVERALL METRICS
+   mAP@0.5: 0.1521
+
+## 2. PER-CLASS PERFORMANCE
+   Class                AP         Precision    Recall    
+   ----------------------------------------------------
+   car                  0.4401     0.8423       0.4484    
+   truck                0.3110     0.4081       0.4000    
+   bus                  0.3105     0.5101       0.3795    
+   traffic light        0.1492     0.5222       0.1459    
+   train                0.0057     0.0095       0.0667    
+   pedestrian           0.0000     0.0000       0.0000    
+   rider                0.0000     0.0000       0.0000    
+   motorcycle           0.0000     0.0000       0.0000    
+   bicycle              0.0000     0.0000       0.0000    
+   traffic sign         0.0000     0.0000       0.0000    
+
+## 3. ERROR ANALYSIS
+   classification_errors: 8505
+   localization_errors: 8351
+   duplicate_detections: 1792
+   background_fps: 5399
+   missed_detections: 123935
+
+## 4. PERFORMANCE BY OBJECT SIZE
+   small: mAP=0.0368
+   medium: mAP=0.1413
+   large: mAP=0.2843
+
+## 5. IMPROVEMENT SUGGESTIONS
+   1. CLASS IMBALANCE: 'pedestrian' has low AP (0.000). Consider data augmentation or oversampling for this class.
+   2. CLASS IMBALANCE: 'rider' has low AP (0.000). Consider data augmentation or oversampling for this class.
+   3. CLASS IMBALANCE: 'motorcycle' has low AP (0.000). Consider data augmentation or oversampling for this class.
+   4. HIGH MISS RATE: >30% of ground truth objects are not detected. Consider: (1) Lowering confidence threshold, (2) Using larger model variant, (3) Multi-scale testing.
+   5. SMALL OBJECTS: 'traffic light' detection is weak (AP=0.149). Consider: (1) Higher input resolution (1280px), (2) Adding more P3-level detection layers, (3) Mosaic augmentation.
+   6. SMALL OBJECTS: 'traffic sign' detection is weak (AP=0.000). Consider: (1) Higher input resolution (1280px), (2) Adding more P3-level detection layers, (3) Mosaic augmentation.
+   7. GENERAL: Consider ensemble of multiple model scales (YOLO11s + YOLO11m) for improved accuracy at the cost of inference time.
+   8. TRAINING: Use longer training schedules (100+ epochs) with cosine LR scheduling and multi-scale training for best results.
